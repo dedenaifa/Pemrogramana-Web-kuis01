@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Riwayat Hidup</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .photo {
+            width: 100px;
+            height: 120px;
+            border: 1px solid #ddd;
+            display: block;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>DAFTAR RIWAYAT HIDUP</h1>
+    <label for="photo">Pas Foto 3 x 4 cm</label><br>
+    <input type="file" id="photo" class="photo"><br><br>
+
+    <h2>I. KETERANGAN PERORANGAN</h2>
+    <table>
+        <tr>
+            <th>No</th>
+            <th>Uraian</th>
+            <th>Keterangan</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Nama Lengkap</td>
+            <td><input type="text" name="nama_lengkap" style="width: 100%;"></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>N.I.P</td>
+            <td><input type="text" name="nip" style="width: 100%;"></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Pangkat dan Golongan Ruang</td>
+            <td><input type="text" name="pangkat_golongan" style="width: 100%;"></td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Tempat Lahir / Tgl. Lahir</td>
+        </tr>
+        <tr>
+            <td rowspan="3"></td>
+            <td>a. Tempat Lahir</td>
+            <td><input type="text" name="tempat_lahir" style="width: 100%;"></td>
+        </tr>
+        <tr>
+            <td>b. Kabupaten / Kota Lahir</td>
+            <td><input type="text" name="kabupaten_kota_lahir" style="width: 100%;"></td>
+        </tr>
+        <tr>
+            <td>c. Tgl. Lahir</td>
+            <td><input type="date" name="tgl_lahir" style="width: 100%;"></td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Jenis Kelamin</td>
+            <td>
+                <input type="radio" name="jenis_kelamin" value="Pria"> Pria
+                <input type="radio" name="jenis_kelamin" value="Wanita"> Wanita
+            </td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>Agama</td>
+            <td><input type="text" name="agama" style="width: 100%;"></td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>Status Perkawinan</td>
+            <td>
+                <input type="radio" name="status_perkawinan" value="Belum Kawin"> Belum Kawin
+                <input type="radio" name="status_perkawinan" value="Kawin"> Kawin
+                <input type="radio" name="status_perkawinan" value="Janda"> Janda
+                <input type="radio" name="status_perkawinan" value="Duda"> Duda
+            </td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>Alamat Rumah</td>
+        </tr>
+        <tr>
+            <td rowspan="5"></td>
+            <td>a. Jalan</td>
+            <td><input type="text" name="jalan" style="width: 100%;"></td>
+        </tr>
+        <tr>
+            <td>b. Kelurahan / Desa</td>
+            <td><input type="text" name="kelurahan_desa" style="width: 100%;"></td>
+        </tr>
+        <tr>
+            <td>c. Kecamatan</td>
+            <td><input type="text" name="kecamatan" style="width: 100%;"></td>
+        </tr>
+        <tr>
+            <td>d. Kabupaten / Kota</td>
+            <td><input type="text" name="kabupaten_kota" style="width: 100%;"></td>
+        </tr>
+        <tr>
+            <td>e. Propinsi</td>
+            <td><input type="text" name="propinsi" style="width: 100%;"></td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>Keterangan Badan</td>
+        </tr>
+        <tr>
+            <td rowspan="7"></td>
+            <td>a. Tinggi (cm)</td>
+            <td><input type="number" name="tinggi" style="width: 100%;"></td>
+        </tr>
+        <tr>
+            <td>b. Berat badan (Kg)</td>
+            <td><input type="number" name="berat_badan" style="width: 100%;"></td>
+        </tr>
+        <tr>
+            <td>c. Rambut</td>
+            <td><input type="text" name="rambut" style="width: 100%;"></td>
+        </tr>
+        <tr>
+            <td>d. Bentuk muka</td>
+            <td><input type="text" name="bentuk_muka" style="width: 100%;"></td>
+        </tr>
+        <tr>
+            <td>e. Warna kulit</td>
+            <td><input type="text" name="warna_kulit" style="width: 100%;"></td>
+        </tr>
+        <tr>
+            <td>f. Ciri khas</td>
+            <td><input type="text" name="ciri_khas" style="width: 100%;"></td>
+        </tr>
+        <tr>
+            <td>g. Cacat tubuh</td>
+            <td><input type="text" name="cacat_tubuh" style="width: 100%;"></td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>Kegemaran (Hobby)</td>
+            <td><input type="text" name="hobby" style="width: 100%;"></td>
+        </tr>
+    </table>
+    <p>*) Coret yang tidak perlu</p>
+
+    <!-- Tambahkan tombol selanjutnya -->
+    <button id="btnSelanjutnya">Selanjutnya</button>
+
+    <script>
+        document.getElementById('btnSelanjutnya').addEventListener('click', function() {
+            // Arahkan ke halaman selanjutnya
+            window.location.href = "Lembar2.html";
+        });
+    </script>
+</body>
+</html>

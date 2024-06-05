@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kursus dan Latihan</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 6px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+
+<table>
+    <thead>
+        <tr>
+            <th>NO.</th>
+            <th>NAMA/KURSUS/LATIHAN</th>
+            <th>LAMANYA (TGL/BL/TH - TGL/BL/TH)</th>
+            <th>IJAZAH/TANDA LULUS/SURAT</th>
+            <th>KET (TH)</th>
+            <th>TEMPAT KETERANGAN</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><input type="text" value="1" disabled></td>
+            <td><input type="text" id="nama1"></td>
+            <td><input type="text" id="lamanya1"></td>
+            <td><input type="text" id="ijazah1"></td>
+            <td><input type="text" id="ket1"></td>
+            <td><input type="text" id="tempat1"></td>
+        </tr>
+        <!-- Additional rows -->
+        <tr>
+            <td><input type="text" value="2" disabled></td>
+            <td><input type="text" id="nama2"></td>
+            <td><input type="text" id="lamanya2"></td>
+            <td><input type="text" id="ijazah2"></td>
+            <td><input type="text" id="ket2"></td>
+            <td><input type="text" id="tempat2"></td>
+        </tr>
+        <tr>
+            <td><input type="text" value="3" disabled></td>
+            <td><input type="text" id="nama3"></td>
+            <td><input type="text" id="lamanya3"></td>
+            <td><input type="text" id="ijazah3"></td>
+            <td><input type="text" id="ket3"></td>
+            <td><input type="text" id="tempat3"></td>
+        </tr>
+        <tr>
+            <td><input type="text" value="4" disabled></td>
+            <td><input type="text" id="nama4"></td>
+            <td><input type="text" id="lamanya4"></td>
+            <td><input type="text" id="ijazah4"></td>
+            <td><input type="text" id="ket4"></td>
+            <td><input type="text" id="tempat4"></td>
+        </tr>
+        <tr>
+            <td><input type="text" value="5" disabled></td>
+            <td><input type="text" id="nama5"></td>
+            <td><input type="text" id="lamanya5"></td>
+            <td><input type="text" id="ijazah5"></td>
+            <td><input type="text" id="ket5"></td>
+            <td><input type="text" id="tempat5"></td>
+        </tr>
+        <tr>
+            <td><input type="text" value="6" disabled></td>
+            <td><input type="text" id="nama6"></td>
+            <td><input type="text" id="lamanya6"></td>
+            <td><input type="text" id="ijazah6"></td>
+            <td><input type="text" id="ket6"></td>
+            <td><input type="text" id="tempat6"></td>
+        </tr>
+    </tbody>
+</table>
+  <!-- Tambahkan tombol selanjutnya -->
+  <button id="btnSelanjutnya">Selanjutnya</button>
+
+  <script>
+      document.getElementById('btnSelanjutnya').addEventListener('click', function() {
+          // Arahkan ke halaman selanjutnya
+          window.location.href = "Lembar4.html";
+      });
+  </script>
+</body>
+</html>
