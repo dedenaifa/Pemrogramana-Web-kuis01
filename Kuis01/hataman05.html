@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Pengalaman Jabatan/Pekerjaan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="date"] {
+            width: calc(100% - 12px);
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        .error {
+            color: red;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <h2>Formulir Pengalaman Jabatan/Pekerjaan</h2>
+    <form id="pengalamanForm" action="#" method="POST">
+        <div class="form-group">
+            <label for="nomor">Nomor:</label>
+            <input type="text" id="nomor" name="nomor" required>
+            <span class="error" id="nomorError"></span>
+        </div>
+        <div class="form-group">
+            <label for="jabatan">Jabatan Pekerjaan:</label>
+            <input type="text" id="jabatan" name="jabatan" required>
+            <span class="error" id="jabatanError"></span>
+        </div>
+        <div class="form-group">
+            <label for="golongan">Golongan/Ruang Gaji:</label>
+            <input type="text" id="golongan" name="golongan" required>
+            <span class="error" id="golonganError"></span>
+        </div>
+        <div class="form-group">
+            <label for="surat_keputusan">Surat Keputusan:</label>
+            <input type="text" id="surat_keputusan" name="surat_keputusan" required>
+            <span class="error" id="suratKeputusanError"></span>
+        </div>
+        <div class="form-group">
+            <label for="pejabat">Pejabat:</label>
+            <input type="text" id="pejabat" name="pejabat" required>
+            <span class="error" id="pejabatError"></span>
+        </div>
+        <div class="form-group">
+            <label for="nomor_sk">Nomor SK:</label>
+            <input type="text" id="nomor_sk" name="nomor_sk" required>
+            <span class="error" id="nomorSKError"></span>
+        </div>
+        <div class="form-group">
+            <label for="tanggal_sk">Tanggal SK:</label>
+            <input type="date" id="tanggal_sk" name="tanggal_sk" required>
+            <span class="error" id="tanggalSKError"></span>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        const form = document.getElementById('pengalamanForm');
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            if (validateForm()) {
+                // Lakukan sesuatu dengan data yang telah divalidasi
+                alert('Formulir telah dikirim!');
+                form.reset();
+            }
+        });
+
+        function validateForm() {
+            let isValid = true;
+
+            const fields = ['nomor', 'jabatan', 'golongan', 'surat_keputusan', 'pejabat', 'nomor_sk', 'tanggal_sk'];
+            fields.forEach(field => {
+                const input = document.getElementById(field);
+                const errorSpan = document.getElementById(field + 'Error');
+                errorSpan.textContent = '';
+
+                if (!input.checkValidity()) {
+                    isValid = false;
+                    errorSpan.textContent = input.validationMessage;
+                }
+            });
+
+            return isValid;
+        }
+    </script>
+</body>
+</html>
